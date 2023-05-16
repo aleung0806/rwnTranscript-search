@@ -1,0 +1,9 @@
+@import '../../styles/_mixins.scss';
+
+.background {
+  @include flex-row;
+}
+
+.link {
+  margin: 0.5rem;
+}
