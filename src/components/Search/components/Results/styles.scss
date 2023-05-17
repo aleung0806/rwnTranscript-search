@@ -1,1 +1,21 @@
 @import '../../../../styles/_mixins.scss';
+
+.results {
+  @include flex-column;
+  padding-bottom: 1rem;
+  align-items: stretch;
+  gap: 0.5rem;
+
+  .result {
+    @include flex-column;
+    padding: 1rem;
+    background-color: transparent;
+    border: solid 2px transparent;
+    border-radius: 5px;
+    
+  }
+  .result:hover {
+    @include flex-column;
+    background-color: $medium-gray;
+  }
+}

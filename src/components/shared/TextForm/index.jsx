@@ -2,16 +2,16 @@ import './styles.scss'
 import { useState } from 'react'
 
 
-const TextForm = () => {
-  const [input, setInput] = useState('')
+const TextForm = ({ text, setText, handleSubmit }) => {
   const handleChange = (e) => {
-    setInput(e.target.value)
+    setText(e.target.value)
   }
+
   return (
-    <div className="text-form">
-      <input className="input" type="text" onChange={handleChange} placeholder="sergent york" />
+    <form className="text-form" onSubmit={handleSubmit} >
+      <input className="input" type="text" value={text} onChange={handleChange} placeholder="sergent york" />
       <button className="button" type="submit">Search</button>
-    </div>
+    </form>
   )
 }
 

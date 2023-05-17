@@ -1,5 +1,7 @@
 import './styles.scss'
 import { useState } from 'react'
+import {useNavigate} from 'react-router-dom'
+import Text from '../Text'
 
 const sample_results = [
   {
@@ -15,19 +17,26 @@ const sample_results = [
 
 ]
 
-const Results = () => {
-  const [results, setResults] = useState(sample_results)
+const Results = ({results}) => {
+  const navigate = useNavigate()
 
+  const processContext = (result) => {
+    const text = result.text
+
+  }
   return (
     <ol className='results'>
       {
         results.map(r => {
-        <li className='result'>
-          <p>{`Ep. ${r.episode.number} - ${r.episode.title}`}</p>
-          <p>{`${r.episode.date}`}</p>
-        </li>
+          return (
+            <li className='result' key={r.episode.number} onClick={() => navigate(`/transcripts/${r.episode.number}`)}>
+              <h2 className='title'>{`Ep. ${r.episode.number} - ${r.episode.title}`}</h2>
+              <p >{`${r.episode.date}`}</p>
+              <Text context={r.context}/>
+            </li>
+          )
         })
-}
+      }
     </ol>
 
   )
