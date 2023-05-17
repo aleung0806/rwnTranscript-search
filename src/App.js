@@ -2,6 +2,7 @@ import {
   BrowserRouter,
   Routes, 
   Route,
+  Navigate,
  } from 'react-router-dom'
 
 import Search from './components/Search'
@@ -21,7 +22,8 @@ const App = () => {
       <NavBar/>
         <Routes>
           <Route path="/" element={<Search/>}/>    
-          <Route path="/transcripts" element={<Transcripts/>}/>
+          <Route path="/search" element={<Search/>}/>
+          <Route path="/transcripts/*" element={<Transcripts/>}/>
           <Route path="/about" element={<About/>}/>
         </Routes>
     </Page>

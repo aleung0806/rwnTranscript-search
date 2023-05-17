@@ -24,8 +24,8 @@ const Directory = () => {
         {
           episodes.map(e => {
             return (
-              <li>
-                <Link className="link">
+              <li key={e.number}>
+                <Link className="link" to={`../${e.episode}`}>
                 {`${e.date} | Ep. ${e.episode} - ${e.title}`}
                 </Link>
               </li>

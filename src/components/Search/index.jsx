@@ -1,5 +1,7 @@
 import './styles.scss'
 import TextForm from '../shared/TextForm'
+import Results from './components/Results'
+
 const Search = () => {
   return (
     <div className='search'>
@@ -10,6 +12,7 @@ const Search = () => {
 
       </div>
       <TextForm />
+      <Results/>
     </div>
 
   )
