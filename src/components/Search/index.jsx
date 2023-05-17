@@ -15,13 +15,14 @@ const Search = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
     setUrlParams(`query=${text}`)
+    window.location.reload()
   }
   useEffect(() => {
     (async () => {
-      const searchTerm = urlParams.get('query')
-      if (searchTerm !== null){
-        setText(searchTerm)
-        const results = await getSearch(searchTerm)
+      const paramQuery = urlParams.get('query')
+      if (paramQuery !== null){
+        setText(paramQuery)
+        const results = await getSearch(paramQuery)
         setResults(results)
       }    
     })()
@@ -38,7 +39,8 @@ const Search = () => {
 
       </div>
       <TextForm text={text} setText={setText} handleSubmit={handleSubmit}/>
-      {results !== null && <Results results={results}/>}
+      {results !== null && <Results results={results} /> }
+      {results === null && urlParams.get('query') === undefined && <Loading/> }
     </div>
 
   )

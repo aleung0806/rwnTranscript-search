@@ -1,13 +1,11 @@
 import './styles.scss'
 import { useState } from 'react'
-
+import {ThreeDots} from 'react-loader-spinner'
 
 const Loading = () => {
 
   return (
-    <div>
-      Loading...
-    </div>
+    < ThreeDots color="#868e96"/>
   )
 }
 

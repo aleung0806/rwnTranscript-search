@@ -30,8 +30,8 @@ const Results = ({results}) => {
         results.map(r => {
           return (
             <li className='result' key={r.episode.number} onClick={() => navigate(`/transcripts/${r.episode.number}`)}>
-              <h2 className='title'>{`Ep. ${r.episode.number} - ${r.episode.title}`}</h2>
-              <p >{`${r.episode.date}`}</p>
+                <h2 className='title'>{`Ep. ${r.episode.number} - ${r.episode.title}`}</h2>
+                <p >{`${r.episode.date}`}</p>
               <Text context={r.context}/>
             </li>
           )

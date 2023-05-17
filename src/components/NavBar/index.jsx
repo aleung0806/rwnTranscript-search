@@ -2,11 +2,13 @@ import { Link } from 'react-router-dom'
 import './styles.scss'
 
 const NavBar = () => {
+  const handleClick = () => {
+  }
   return (
     <div className="navbar" direction='row'>
-      <Link className="link" to="/home"> Search </Link>
-      <Link className="link" to="/transcripts"> Transcripts </Link>
-      <Link className="link" to="/about"> About </Link>
+      <a className="link" href='/home'>Search</a>
+      <Link className="link" to="/transcripts" onClick={handleClick}> Transcripts </Link>
+      <Link className="link" to="/about" onClick={handleClick}> About </Link>
     </div >
   )
 }
