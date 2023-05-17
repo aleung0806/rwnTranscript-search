@@ -1,0 +1,46 @@
+@import '../../../styles/_mixins.scss';
+
+.text-form {
+  @include flex-row;
+  gap: 0.5rem;
+  
+  .input {
+    font-size: 16px;
+    padding: 0.5rem 0.75rem;
+    background-color: $medium-gray;
+    display: flex;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    color: $off-white;
+  }
+  .input:focus-visible {
+    outline: none;
+  }
+
+  .button {
+    font-size: 16px;
+    color: $light-gray;
+    display: flex;
+    padding: 0.5rem 0.75rem;
+    background-color: transparent;
+    border: 1px solid $light-gray;
+    border-radius: 3px;
+  }
+  
+  .button:hover {
+    color: $off-white;
+    transition: all 0.5s;
+  }
+  
+  .button:active {
+    background-color: $light-gray;
+    transition: all 0.1s;
+  }
+  
+  
+}
+
+
+
+
+

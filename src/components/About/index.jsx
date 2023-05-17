@@ -1,8 +1,10 @@
+import './styles.scss'
+
 const About = () => {
   return (
-    <div className="body">
+    <div className="about">
       <h1>About</h1>
-      <p>This a fan-made website for the Radio War Nerd podcast. </p>
+      <p>This is a fan-made website of Radio War Nerd transcripts. </p>
     </div>
   )
 }

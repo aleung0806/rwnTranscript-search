@@ -2,4 +2,8 @@
 
 .page {
   @include flex-column;
+  padding: 1rem;
+  padding-top: 0.5rem;
+  background-color: $dark-gray;
+  align-items: center;
 }

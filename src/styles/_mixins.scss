@@ -1,21 +1,17 @@
+@import '_variables';
+
 @mixin flex-row {
   display: flex;
-  flexDirection: row;
-  alignItems: center;
-  justifyContent: center;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 @mixin flex-column {
   display: flex;
-  flexDirection: column;
-  alignItems: center;
-  justifyContent: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-@mixin header1 {
-  font-size: 20;
-}
 
-@mixin text1 {
-  font-size: 16;
-}

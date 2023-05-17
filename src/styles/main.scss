@@ -1,7 +1,30 @@
-@import '_variables';
 @import 'mixins';
 
 body {
+  @include flex-column;
+  align-items: stretch;
   margin: 0;
   padding: 0;
+  background-color: $dark-gray;
 }
+
+ol {
+  list-style-type: none;
+  padding: 0;
+}
+
+h1 {
+  font-size: 22px;
+  color: $off-white;
+}
+
+p {
+  font-size: 16px;
+  color: $off-white;
+}
+
+
+
+
+
+

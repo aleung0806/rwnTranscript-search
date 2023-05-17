@@ -1,0 +1,18 @@
+@import '../../../../styles/_mixins.scss';
+
+.directory {
+  .list {
+    @include flex-column;
+    align-items: flex-start;
+  }
+
+
+  .link {
+    text-decoration: none;
+    color: $off-white;
+  }
+
+  .link:hover {
+    color: $terminal-green;
+  }
+}
