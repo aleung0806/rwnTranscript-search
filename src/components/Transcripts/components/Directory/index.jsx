@@ -1,6 +1,7 @@
 import './styles.scss'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import useEpisodes from '../../../../hooks/useEpisodes'
 
 const sample_episodes = [
   {
@@ -16,12 +17,13 @@ const sample_episodes = [
 ]
 
 const Directory = () => {
-  const [episodes, setEpisodes ] = useState(sample_episodes)
+  const episodes = useEpisodes()
+
   return (
     <div className="directory">
       <h1>Directory</h1>
       <ol className="list">
-        {
+        { episodes !== [] &&
           episodes.map(e => {
             return (
               <li key={e.number}>

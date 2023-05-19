@@ -5,20 +5,22 @@ import {
   Navigate,
  } from 'react-router-dom'
 
+import Providers from './Providers'
+
+
 import Search from './components/Search'
 import Transcripts from './components/Transcripts'
 import About from './components/About'
-
-import Page from './components/Page'
+import Layout from './components/Layout'
 import NavBar from './components/NavBar'
-
 import './styles/main.scss'
 
 
 const App = () => {
   return (
-    <BrowserRouter>
-    <Page>
+
+    <Providers>
+    <Layout>
       <NavBar/>
         <Routes>
           <Route path="/" element={<Navigate to="home"/>}/>    
@@ -26,8 +28,9 @@ const App = () => {
           <Route path="/transcripts/*" element={<Transcripts/>}/>
           <Route path="/about" element={<About/>}/>
         </Routes>
-    </Page>
-    </BrowserRouter> 
+    </Layout>
+    </Providers>
+
   )
 }
 

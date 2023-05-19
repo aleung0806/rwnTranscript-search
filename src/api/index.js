@@ -38,5 +38,18 @@ const getSearch = async (query) => {
   return fakeResults(query)
 }
 
+const getEpisodes = async () => {
+  const response = await axios.get(`/episodes`)
+  return response.data
+}
 
-export default getSearch
+const getTranscript = async (episodeId) => {
+  const response = await axios.get(`/transcript/${episodeId}`)
+}
+
+
+export {
+  getSearch, 
+  getEpisodes,
+  getTranscript
+}

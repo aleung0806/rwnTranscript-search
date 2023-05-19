@@ -5,7 +5,6 @@ import Results from './components/Results'
 import Loading from './components/Loading'
 
 import { useSearchParams } from 'react-router-dom'
-import getSearch from '../api/search'
 
 const Search = () => {
   const [ urlParams, setUrlParams ] = useSearchParams()
@@ -17,17 +16,7 @@ const Search = () => {
     setUrlParams(`query=${text}`)
     window.location.reload()
   }
-  useEffect(() => {
-    (async () => {
-      const paramQuery = urlParams.get('query')
-      if (paramQuery !== null){
-        setText(paramQuery)
-        const results = await getSearch(paramQuery)
-        setResults(results)
-      }    
-    })()
-    return () => {}
-  }, [])
+
 
 
   return (
