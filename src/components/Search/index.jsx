@@ -3,21 +3,18 @@ import { useState, useEffect } from 'react'
 import TextForm from '../shared/TextForm'
 import Results from './components/Results'
 import Loading from './components/Loading'
+import useResults from '../../hooks/useResults'
 
-import { useSearchParams } from 'react-router-dom'
 
 const Search = () => {
-  const [ urlParams, setUrlParams ] = useSearchParams()
+  const results = useResults()
   const [ text, setText ] = useState('')
-  const [ results, setResults] = useState(null)
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    setUrlParams(`query=${text}`)
-    window.location.reload()
+    // e.preventDefault()
+    // setUrlParams(`query=${text}`)
+    // window.location.reload()
   }
-
-
 
   return (
     <div className='search'>
@@ -28,8 +25,7 @@ const Search = () => {
 
       </div>
       <TextForm text={text} setText={setText} handleSubmit={handleSubmit}/>
-      {results !== null && <Results results={results} /> }
-      {results === null && urlParams.get('query') === undefined && <Loading/> }
+      {results !== [] && <Results results={results} /> }
     </div>
 
   )

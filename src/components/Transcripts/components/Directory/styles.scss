@@ -14,5 +14,7 @@
 
   .link:hover {
     color: $terminal-green;
+    transition: all 0.5s;
+
   }
 }

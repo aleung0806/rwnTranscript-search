@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Navigate, Routes, Route } from 'react-router-dom'
 import Directory from './components/Directory'
-import Episode from './components/Episode'
+import Transcript from './components/Transcript'
 
 
 const Transcripts = () => {
@@ -9,7 +9,7 @@ const Transcripts = () => {
     <Routes>
       <Route path="/" element={<Navigate to="directory" />}/>    
       <Route path="/directory" element={<Directory/>}/>
-      <Route path="/:id" element={<Episode />}/>
+      <Route path="/:id" element={<Transcript/>}/>
     </Routes>
   )
 }

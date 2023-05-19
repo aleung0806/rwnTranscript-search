@@ -1,0 +1,27 @@
+@import '../../../../styles/_mixins.scss';
+
+.episode {
+  .list {
+    @include flex-column;
+    align-items: flex-start;
+  }
+
+  .list-item {
+    @include flex-row;
+  }
+
+  .link {
+    text-decoration: none;
+    color: $light-blue;
+  }
+
+  .link:hover {
+    color: $terminal-green;
+    transition: all 0.5s;
+
+  }
+
+  .text {
+    margin: 0;
+  }
+}
