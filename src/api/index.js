@@ -1,5 +1,6 @@
 import axios from 'axios'
 
+const baseUrl = 'http://localhost:3001'
 // const getSearch = async (query) => {
 //   const response = await axios.get(`/search?query=${query}`)
 //   return response.data
@@ -39,12 +40,12 @@ const getSearch = async (query) => {
 }
 
 const getEpisodes = async () => {
-  const response = await axios.get(`/episodes`)
+  const response = await axios.get(baseUrl + `/episodes`)
   return response.data
 }
 
-const getTranscript = async (episodeId) => {
-  const response = await axios.get(`/transcript/${episodeId}`)
+const getTranscript = async (id) => {
+  const response = await axios.get(baseUrl + `/transcripts/${id}`)
 }
 
 

@@ -2,21 +2,10 @@ import './styles.scss'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import useEpisodes from '../../../../hooks/useEpisodes'
-
-const sample_episodes = [
-  {
-    date: '01/01/2000',
-    episode: 1,
-    title: 'The Iraq War'
-  },
-  {
-    date: '02/01/2000',
-    episode: 2,
-    title: 'George Bush'
-  }
-]
+import { getEpisodes }from '../../../../api'
 
 const Directory = () => {
+
   const episodes = useEpisodes()
 
   return (
@@ -24,11 +13,11 @@ const Directory = () => {
       <h1>Directory</h1>
       <ol className="list">
         { episodes !== [] &&
-          episodes.map(e => {
+         episodes.map(e => {
             return (
-              <li key={e.number}>
-                <Link className="link" to={`../${e.episode}`}>
-                {`${e.date} | Ep. ${e.episode} - ${e.title}`}
+              <li key={e.id}>
+                <Link className="link" to={`../${e.id}`}>
+                {`${e.date} | Ep. ${e.id} | ${e.title}`}
                 </Link>
               </li>
             )
