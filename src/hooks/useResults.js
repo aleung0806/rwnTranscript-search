@@ -15,7 +15,7 @@ const useResults = () => {
      
     })()
     return () => {}
-  }, [])
+  }, [searchParams])
 
   return results
 }

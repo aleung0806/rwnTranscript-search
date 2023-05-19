@@ -15,10 +15,10 @@ const Results = ({results}) => {
       {results !== [] &&
         results.map(r => {
           return (
-            <li className='result' key={r.episode.id} onClick={() => navigate(`/transcripts/${r.episode.number}`)}>
-                <h2 className='title'>{`Ep. ${r.episode.id} - ${r.episode.title}`}</h2>
-                <p >{`${r.episode.date}`}</p>
-              <Text context={r.context}/>
+            <li className='result' key={r.id} onClick={() => navigate(`/transcripts/${r.id}`)}>
+                <h2 className='title'>{`Ep. ${r.id}`}</h2>
+                
+              <Text context={r.context} query={r.query}/>
             </li>
           )
         })

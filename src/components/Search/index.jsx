@@ -7,9 +7,10 @@ import useResults from '../../hooks/useResults'
 import { useSearchParams } from 'react-router-dom'
 
 const Search = () => {
-  const results = useResults()
-  const [ text, setText ] = useState('')
   const [ searchParams, setSearchParams ] = useSearchParams()
+  const [ text, setText ] = useState(searchParams.get('query') !== null ? searchParams.get('query') : '')
+  const results = useResults()
+
 
   const handleSubmit = (e) => {
     e.preventDefault()

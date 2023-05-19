@@ -4,13 +4,13 @@
   align-items: flex-end;
   .highlight {
     color: $terminal-green;
-    // animation: fancy 1s infinite;
+    animation: fancy 1s infinite;
   }
 }
 
 @keyframes fancy {
-  0% { font-weight: 1000}
-  50% { font-weight: 500}
-  100% { font-weight: 1000}
+  0% { color: green; }
+  50% { color: purple; }
+  100% { color: red; }
 
 }

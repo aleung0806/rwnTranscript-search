@@ -1,0 +1,15 @@
+@import '../../../styles/_mixins.scss';
+
+.highlight {
+  color: $terminal-green;
+  animation: fancy 5s infinite;
+}
+
+@keyframes fancy {
+  0% { color: green; }
+  25% { color: orange; }
+  50% { color: purple; }
+  75% { color: red; }
+  100% { color: green; }
+
+}

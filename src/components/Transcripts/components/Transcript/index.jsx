@@ -2,9 +2,12 @@ import './styles.scss'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import useTranscript from '../../../../hooks/useTranscript'
+import { useSearchParams } from 'react-router-dom'
+import HighlightText from '../../../shared/HighlightText'
 
 const Transcript = () => {
   const t = useTranscript()
+  const [searchParams, setSearchParams ] = useSearchParams()
   return (
     <div className="episode">
       { Object.keys(t).length !== 0 &&
@@ -17,7 +20,7 @@ const Transcript = () => {
               return (
                 <li className="list-item" key={s.id}>
                   <a className="link" href={`${t.episode.url}#t=${s.seconds}`}> {s.start} &nbsp;</a>
-                  <p className="text">{`${s.text}`}</p>
+                  <HighlightText context={`${s.text}`} query={searchParams.get('query') === null ? '' : searchParams.get('query')}/>
                 </li>
               )
             })
