@@ -4,16 +4,16 @@ import TextForm from '../shared/TextForm'
 import Results from './components/Results'
 import Loading from './components/Loading'
 import useResults from '../../hooks/useResults'
-
+import { useSearchParams } from 'react-router-dom'
 
 const Search = () => {
   const results = useResults()
   const [ text, setText ] = useState('')
+  const [ searchParams, setSearchParams ] = useSearchParams()
 
   const handleSubmit = (e) => {
-    // e.preventDefault()
-    // setUrlParams(`query=${text}`)
-    // window.location.reload()
+    e.preventDefault()
+    setSearchParams(`query=${text}`)
   }
 
   return (
