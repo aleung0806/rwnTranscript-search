@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import './styles.scss'
 
-const NavBar = () => {
+export const NavBar = () => {
   const handleClick = () => {
   }
   return (
@@ -12,5 +12,3 @@ const NavBar = () => {
     </div >
   )
 }
-
-export default NavBar

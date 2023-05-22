@@ -1,10 +1,10 @@
-import './styles.scss'
+import './Directory.scss'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import useEpisodes from '../../../../hooks/useEpisodes'
-import { getEpisodes }from '../../../../api'
+import useEpisodes from '../../../hooks/useEpisodes'
+import { getEpisodes }from '../../../api'
 
-const Directory = () => {
+export const Directory = () => {
 
   const episodes = useEpisodes()
 
@@ -28,4 +28,3 @@ const Directory = () => {
   )
 }
 
-export default Directory

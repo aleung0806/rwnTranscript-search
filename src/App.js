@@ -8,11 +8,11 @@ import {
 import Providers from './Providers'
 
 
-import Search from './components/Search'
-import Transcripts from './components/Transcripts'
-import About from './components/About'
-import Layout from './components/Layout'
-import NavBar from './components/NavBar'
+import { Search }from './components/Search'
+import { Transcripts }from './components/Transcripts'
+import { About } from './components/About'
+import { Layout } from './components/Layout'
+import { NavBar } from './components/NavBar'
 import './styles/main.scss'
 
 

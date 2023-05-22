@@ -1,20 +1,27 @@
-@import '../../../../styles/_mixins.scss';
+@import '../../../styles/_mixins.scss';
 
-.directory {
+.episode {
   .list {
     @include flex-column;
     align-items: flex-start;
   }
 
+  .list-item {
+    @include flex-row;
+  }
 
   .link {
     text-decoration: none;
-    color: $off-white;
+    color: $light-blue;
   }
 
   .link:hover {
     color: $terminal-green;
     transition: all 0.5s;
 
+  }
+
+  .text {
+    margin: 0;
   }
 }

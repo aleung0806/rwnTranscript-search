@@ -2,7 +2,7 @@ import './styles.scss'
 import { useState } from 'react'
 const escapeStringRegexp = require('escape-string-regexp');
 
-const HighlightText = ({context, query}) => {
+export const HighlightText = ({context, query}) => {
 
   const highlight = (text) => {
     const escapedQuery = escapeStringRegexp(query);
@@ -27,5 +27,3 @@ const HighlightText = ({context, query}) => {
     </p>
   )
 }
-
-export default HighlightText

@@ -2,7 +2,7 @@ import './styles.scss'
 import { useState } from 'react'
 
 
-const TextForm = ({ text, setText, handleSubmit }) => {
+export const TextForm = ({ text, setText, handleSubmit }) => {
   const handleChange = (e) => {
     setText(e.target.value)
   }
@@ -15,4 +15,3 @@ const TextForm = ({ text, setText, handleSubmit }) => {
   )
 }
 
-export default TextForm

@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import { Navigate, Routes, Route } from 'react-router-dom'
-import Directory from './components/Directory'
-import Transcript from './components/Transcript'
+import { Directory } from './Directory'
+import { Transcript } from './Transcript'
 
 
-const Transcripts = () => {
+export const Transcripts = () => {
   return (
     <Routes>
       <Route path="/" element={<Navigate to="directory" />}/>    
@@ -14,4 +14,3 @@ const Transcripts = () => {
   )
 }
 
-export default Transcripts

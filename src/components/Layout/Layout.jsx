@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import './styles.scss'
 
-const Page = ({children}) => {
+export const Layout = ({children}) => {
   return (
     <div className="page">
       {children}
@@ -9,4 +9,3 @@ const Page = ({children}) => {
   )
 }
 
-export default Page

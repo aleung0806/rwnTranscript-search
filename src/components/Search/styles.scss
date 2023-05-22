@@ -3,3 +3,19 @@
 .search {
   @include flex-column;
 }
+
+
+.text {
+  align-items: flex-end;
+  .highlight {
+    color: $terminal-green;
+    animation: fancy 1s infinite;
+  }
+}
+
+@keyframes fancy {
+  0% { color: green; }
+  50% { color: purple; }
+  100% { color: red; }
+
+}
