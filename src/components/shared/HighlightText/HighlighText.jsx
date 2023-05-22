@@ -1,4 +1,4 @@
-import './styles.scss'
+import './HighlightText.scss'
 import { useState } from 'react'
 const escapeStringRegexp = require('escape-string-regexp');
 

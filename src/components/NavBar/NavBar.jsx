@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import './styles.scss'
+import './NavBar.scss'
 
 export const NavBar = () => {
   const handleClick = () => {

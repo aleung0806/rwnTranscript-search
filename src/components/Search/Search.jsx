@@ -1,4 +1,4 @@
-import './styles.scss'
+import './Search.scss'
 import { useState, useEffect } from 'react'
 import { TextForm } from '../shared/TextForm'
 import { Results } from './Results'

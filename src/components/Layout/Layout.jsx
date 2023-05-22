@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import './styles.scss'
+import './Layout.scss'
 
 export const Layout = ({children}) => {
   return (

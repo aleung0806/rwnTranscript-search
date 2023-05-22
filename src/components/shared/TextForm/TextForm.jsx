@@ -1,4 +1,4 @@
-import './styles.scss'
+import './TextForm.scss'
 import { useState } from 'react'
 
 
