@@ -1,1 +1,1 @@
-scss react turned into the RWN project frontend
+scss/react + json server for Radio War Nerd transcript search
